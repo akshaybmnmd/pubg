@@ -27,7 +27,7 @@ if ($array->data->available_slots[$slot]->available) {
     $array->data->available_slots[$slot]->team = $team;
     $array->data->available_slots[$slot]->player_count = $count;
     $array->data->available_slots[$slot]->players = $players;
-    $array->data->available_slots[$slot]->players = time();
+    $array->data->available_slots[$slot]->time = time();
 } else {
     echo "already booked";
 }
