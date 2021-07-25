@@ -83,6 +83,10 @@ fclose($myfile);
 </body>
 
 <script>
+  setTimeout(function() {
+    window.location.reload();
+  }, 60000);
+
   var slot = "";
   var token = "";
 
