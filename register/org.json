@@ -1,9 +1,9 @@
 {
   "data": {
     "slots": 25,
-    "map": "erangel",
-    "date": "25/07/2021",
-    "time": "10 PM",
+    "map": "map",
+    "date": "date",
+    "time": "time",
     "registered_slots": {},
     "available_slots": [
       {
@@ -70,7 +70,7 @@
         "time": ""
       },
       {
-        "available": false,
+        "available": true,
         "team": "",
         "player_count": "",
         "players": "",
