@@ -52,32 +52,34 @@ fclose($myfile);
 </head>
 
 <body>
-  <div class="mb-3">
-    <label for="teamName" class="form-label">Team Name</label>
-    <input type="text" class="form-control" id="teamName" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">If you are already registered as a team <a href="#">signup</a></div>
-  </div>
-  <div class="mb-3">
-    <label for="playerCount" class="form-label">Players Count</label>
-    <input type="number" class="form-control" id="playerCount">
-  </div>
-  <div class="mb-3">
-    <label for="playerNames" class="form-label">Players Names</label>
-    <textarea type="textarea" class="form-control" id="playerNames"></textarea>
-  </div>
-  <div class="mb-3">
-    <label for="slots" class="form-label">Choose slot</label>
-    <div class="btn-group-vertical" role="group" aria-label="Basic example" id="slots">
-
-      <?php echo $div; ?>
-
+  <div>
+    <div class="mb-3">
+      <label for="teamName" class="form-label">Team Name</label>
+      <input type="text" class="form-control" id="teamName" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">If you are already registered as a team <a href="#">signup</a></div>
     </div>
+    <div class="mb-3">
+      <label for="playerCount" class="form-label">Players Count</label>
+      <input type="number" class="form-control" id="playerCount">
+    </div>
+    <!-- <div class="mb-3">
+      <label for="playerNames" class="form-label">Players Names</label>
+      <textarea type="textarea" class="form-control" id="playerNames"></textarea>
+    </div> -->
+    <div class="mb-3">
+      <label for="slots" class="form-label">Choose slot</label>
+      <div class="btn-group-vertical" role="group" aria-label="Basic example" id="slots">
+
+        <?php echo $div; ?>
+
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" onclick="register()">Submit</button>
+
+    <?php echo $data; ?>
+
   </div>
-
-  <button type="submit" class="btn btn-primary" onclick="register()">Submit</button>
-
-  <?php echo $data; ?>
-
 </body>
 
 <script>
@@ -113,7 +115,7 @@ fclose($myfile);
           form_data.append('team_name', $("#teamName").val());
           form_data.append('count', $("#playerCount").val());
           form_data.append('slot', slot);
-          form_data.append('players', $("#playerNames").val());
+          form_data.append('players', '$("#playerNames").val()');
           $.ajax({
             url: "../api/register.php",
             dataType: 'text',
